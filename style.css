@@ -1,6 +1,5 @@
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,200");
 
 html {
   font-size: 100%;
@@ -9,6 +8,10 @@ html {
 body {
   font-family: Roboto, "Noto Sans TC", sans-serif;
   line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h2 {
@@ -46,33 +49,37 @@ a {
   padding: 80px 0;
 }
 
+/* Google Fonts Icon */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 40;
+}
+
+/* Utilities */
+.bg-primary {
+  background-color: #aa0601;
+}
+
 .header {
-  background: #aa0601;
+  padding: 16px 0;
 }
 
 .logo {
-  width: 104px; /* 80 + 12*2 = 104 */
-  height: auto;
-  padding: 0 12px;
+  width: 80px;
 }
 
 .header-flex {
   justify-content: space-between;
-  align-items: center;
 }
 
 .mainmenu {
-  justify-content: space-between;
-  padding: 25px 12px;
-}
-
-.mainmenu li:not(:last-child) {
-  margin-right: 64px;
+  align-items: center;
 }
 
 .mainmenu li a {
   font-size: 1.25rem;
   color: #ffffff;
+  display: block;
+  padding: 9px 32px;
 }
 
 .mainmenu li a:hover {
@@ -106,7 +113,6 @@ a {
 .home-banner-flex a {
   font-size: 1.25rem;
   color: #ffffff;
-  background: #aa0601;
   display: inline-block;
   padding: 12px;
 }
@@ -218,6 +224,7 @@ a {
 
 .contact-form {
   max-width: 636px;
+  margin: 0 auto;
 }
 
 .contact-form p {
@@ -260,7 +267,6 @@ a {
 .contact-form .submit-btn {
   color: #ffffff;
   text-align: center;
-  background: #aa0601;
   max-width: 416px;
   display: block;
   margin: 0 auto;
@@ -274,7 +280,6 @@ a {
 
 .footer {
   color: #ffffff;
-  background: #aa0601;
   padding: 48px 0 32px 0;
 }
 
@@ -293,13 +298,13 @@ a {
 }
 
 .footnav {
-  padding: 8px 0;
+  margin-left: -24px;
   margin-bottom: 24px;
 }
 
-.footnav li:not(:last-child),
-.policy li:not(:last-child) {
-  margin-right: 48px;
+.footnav li a {
+  display: block;
+  padding: 8px 24px;
 }
 
 .contact-info {
@@ -315,6 +320,7 @@ a {
 
 .contact-info .icon {
   font-size: 2.25rem;
+  margin-right: 20px;
 }
 
 .sociallink li:not(:last-child) {
@@ -334,17 +340,7 @@ a {
 /* 平板 */
 @media (max-width: 768px) {
   .container {
-    /* 768 - 36*2 + 12*2 */
-    max-width: 720px;
-  }
-
-  .logo {
-    width: 128px;
-    padding: 0 24px;
-  }
-
-  .mainmenu {
-    padding: 25px 24px;
+    max-width: 720px; /* 768 - 36*2 + 12*2 = 720*/
   }
 
   .home-banner {
@@ -362,7 +358,6 @@ a {
 
   .classic-glass-flex .item {
     width: 100%;
-    padding: 0;
   }
 
   .classic-glass-flex .item:not(:last-child) {
@@ -399,6 +394,10 @@ a {
     font-size: inherit;
   }
 
+  .footnav {
+    flex-direction: column;
+  }
+
   .sociallink a {
     width: 40px;
     height: auto;
@@ -411,19 +410,22 @@ a {
 
 /* 手機 */
 @media (max-width: 375px) {
-  .container {
-    /* 375 - 27 + 12*2 */
-    max-width: 373px;
-  }
-
   h2 {
     font-size: 2rem;
     margin-bottom: 24px;
   }
 
+  .container {
+    /* 375 - 27 + 12*2 */
+    max-width: 373px;
+  }
+
+  .header {
+    padding: 16px 0 0 0;
+  }
+
   .logo {
-    width: 104px; /* 104 - 12*2 = 80*/
-    padding: 16px 12px;
+    margin-bottom: 16px;
   }
 
   .ptb {
@@ -431,8 +433,7 @@ a {
   }
 
   .mainmenu {
-    width: 100%;
-    padding: 0;
+    margin: 0 -12px;
   }
 
   .mainmenu li {
@@ -441,13 +442,8 @@ a {
     border: 1px solid #ffffff;
   }
 
-  .mainmenu li:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .mainmenu a {
+  .mainmenu li a {
     font-size: inherit;
-    display: block;
     padding: 12px;
   }
 
