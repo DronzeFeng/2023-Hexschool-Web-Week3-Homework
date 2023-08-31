@@ -425,15 +425,16 @@ a {
   }
 
   .logo {
-    margin-bottom: 16px;
+    margin: 0 0 16px 15px;
   }
 
   .ptb {
     padding: 40px 0;
   }
 
-  .mainmenu {
-    margin: 0 -12px;
+  .header-flex {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .mainmenu li {
