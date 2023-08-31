@@ -82,6 +82,10 @@ a {
   padding: 9px 32px;
 }
 
+.mainmenu li:last-child a {
+  padding-right: 0;
+}
+
 .mainmenu li a:hover {
   color: #650300;
 }
@@ -298,13 +302,16 @@ a {
 }
 
 .footnav {
-  margin-left: -24px;
   margin-bottom: 24px;
 }
 
 .footnav li a {
   display: block;
   padding: 8px 24px;
+}
+
+.footnav li:first-child a {
+  padding-left: 0;
 }
 
 .contact-info {
@@ -323,18 +330,27 @@ a {
   margin-right: 20px;
 }
 
-.sociallink li:not(:last-child) {
+.sociallink li a {
+  width: 48px;
+  display: block;
   margin-right: 32px;
 }
 
-.sociallink a {
-  width: 48px;
-  height: auto;
-  display: inline-block;
+.sociallink li:last-child a {
+  margin-right: 0;
 }
 
 .copyright-flex {
   justify-content: space-between;
+}
+
+.policy li a {
+  display: block;
+  padding: 8px 24px;
+}
+
+.policy li:last-child a {
+  padding-right: 0;
 }
 
 /* 平板 */
@@ -400,11 +416,14 @@ a {
 
   .sociallink a {
     width: 40px;
-    height: auto;
   }
 
-  .sociallink li:not(:last-child) {
+  .sociallink li a {
     margin-right: 16px;
+  }
+
+  .sociallink li:last-child a {
+    margin-right: 0;
   }
 }
 
@@ -416,8 +435,7 @@ a {
   }
 
   .container {
-    /* 375 - 27 + 12*2 */
-    max-width: 373px;
+    max-width: 373px; /* 375 - 27 + 12*2 = 373*/
   }
 
   .header {
@@ -508,15 +526,18 @@ a {
 
   .contact-info .icon {
     font-size: 1.125rem;
+    margin-right: 10px;
   }
 
-  .sociallink a {
+  .sociallink li a {
     width: 24px;
-    height: auto;
   }
 
-  .copyright-flex li {
-    width: 100%;
-    padding-top: 8px;
+  .policy {
+    flex-direction: column;
+  }
+
+  .policy li a {
+    padding: 8px 0 0 0;
   }
 }
