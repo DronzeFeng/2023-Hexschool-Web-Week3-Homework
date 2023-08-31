@@ -376,8 +376,12 @@ a {
     width: 100%;
   }
 
-  .classic-glass-flex .item:not(:last-child) {
+  .classic-glass-flex .item {
     margin-bottom: 24px;
+  }
+
+  .classic-glass-flex .item:last-child {
+    margin-bottom: 0;
   }
 
   .endorse-glass-flex .item {
