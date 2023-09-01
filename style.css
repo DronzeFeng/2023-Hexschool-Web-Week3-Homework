@@ -63,12 +63,12 @@ a {
   padding: 16px 0;
 }
 
-.logo {
-  width: 80px;
-}
-
 .header-flex {
   justify-content: space-between;
+}
+
+.logo {
+  width: 80px;
 }
 
 .mainmenu {
@@ -220,10 +220,6 @@ a {
 
 .contact-us {
   background: #fbf2f2;
-}
-
-.contact-us-flex {
-  justify-content: center;
 }
 
 .contact-form {
@@ -418,11 +414,8 @@ a {
     flex-direction: column;
   }
 
-  .sociallink a {
-    width: 40px;
-  }
-
   .sociallink li a {
+    width: 40px;
     margin-right: 16px;
   }
 
